@@ -3,7 +3,7 @@ body {
 	padding: 0;
 }
 .main {
-	max-height: 550px;;
+	max-height: 550px;
 	background-color: #292c2f;
 	color: white;
 	font-size: 38pt;
@@ -13,6 +13,7 @@ body {
 footer{
      /* position: fixed; */
 	bottom: 0;
+
 }
 .footer-distributed{
 	background-color: #247034;
@@ -177,4 +178,3 @@ footer{
 	}
  
 }
-

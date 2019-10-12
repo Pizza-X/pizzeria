@@ -15,6 +15,7 @@
 </head>
 
 	<body>
+            
 		<footer class="footer-distributed">
                     <div id="page-container">
 			<div class="footer-left">
@@ -58,6 +59,7 @@
 			</div>
                     </div>
 		</footer>
+            
 
 	</body>
 

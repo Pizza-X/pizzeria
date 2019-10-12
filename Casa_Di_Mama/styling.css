@@ -25,9 +25,19 @@
     margin: 5px;
     border-radius: 5px;
 }
+.containerArtikelInfo{
+    text-align: left;
+    
+}
+#winkelwagenPNG{
+    width: 10%;
+    height: 10%;
+    padding-right: 18%;
+    padding-left: 5%;
+}
 #img_artikel{
-    width: 250px;
-    height: 250px;
+    width: 85%;
+    height: 85%;
 }
 .overOns{
     width: 750px;

@@ -14,38 +14,56 @@
                 <a href="">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
-                <p>Dit is artikel 1</p>
+                <div class="containerArtikelInfo">
+                    <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
+                    Dit is artikel 1</p>
+                </div>
             </div>
             <div class="artikel_index">
                 <a href="">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
-                <p>Dit is artikel 2</p> 
+                <div class="containerArtikelInfo">
+                    <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
+                    Dit is artikel 2</p>
+                </div>
             </div>
             <div class="artikel_index">
                 <a href="">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
-                <p>Dit is artikel 3</p>
-            </div>
-            <div class="artikel_index">
-                <a href="">
-                <img id=img_artikel alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
-                </a>
-                <p>Dit is artikel 4</p>
+                <div class="containerArtikelInfo">
+                    <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
+                    Dit is artikel 3</p>
+                </div>
             </div>
             <div class="artikel_index">
                 <a href="">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
-                <p>Dit is artikel 5</p>
+                <div class="containerArtikelInfo">
+                    <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
+                    Dit is artikel 4</p>
+                </div>
             </div>
             <div class="artikel_index">
                 <a href="">
-                <img id=img_artikel alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
+                <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
-                <p>Dit is artikel 6</p>
-            </div> 
+                <div class="containerArtikelInfo">
+                    <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
+                    Dit is artikel 5</p>
+                </div>
+            </div>
+            <div class="artikel_index">
+                <a href="">
+                <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
+                </a>
+                <div class="containerArtikelInfo">
+                    <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
+                    Dit is artikel 6</p>
+                </div>
+            </div>
             <div class="overOns">
                 <p> <br> <h1> Over ons </h1> </p> 
                <p> <br> Pizzeria Casa Di Mama is een opkomende pizza bezorg organisatie die al veel pizzawinkels in Nederland heeft gevestigd. 

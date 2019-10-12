@@ -31,4 +31,5 @@
         
     </body>
 </html>
-<?php //include 'Footer.php';?>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<?php include 'Footer.php';?>
