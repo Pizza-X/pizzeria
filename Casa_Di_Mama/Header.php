@@ -23,7 +23,7 @@
     <?php } ?>
     <li><h3> <a href="#">Winkelwagen</a></h3> </li>
     <li><h3> <a href="registratieAbbo.php">Ons Abonnement</a></h3> </li>
-    <li><h3> <a href="">Contact</a></h3> </li>
+    <li><h3> <a href="javascript: document.body.scrollIntoView(false);">Contact</a></h3> </li>
     <?php if (isset($_SESSION['gebruikersnaam'])) { if($_SESSION['gebruikersnaam'] != 'admin'&& $_SESSION['gebruikersnaam'] != 'Admin'){ ?>
     <li><h3> <a >Welkom <?php echo ucwords($_SESSION['gebruikersnaam']) ?></a></h3></li>
     <?php } else { ?>
