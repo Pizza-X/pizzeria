@@ -56,7 +56,7 @@ echo '<br />';
 }  // if voorkomt dat er geen lege of foute data in de DB ingeschreven worden
   // $insert hout de inhoud van de query in
 if (!empty($dag) && !empty($tijd) && !empty($aantal_pizza) && !empty($soort_pizza) && !empty($klantnr)){
-$insert="INSERT INTO `abonnement` (`Abbonr`, `Klantnr`, `Dag`, `tijd`, `Datum`, `ProductID`) VALUES (NULL, '$klantnr', '$dag', '$tijd', '$date', '$soort_pizza')";
+$insert="INSERT INTO `abonnement` (`Abbonr`, `Klantnr`, `Dag`, `tijd`,`aantalpizza`, `Datum`, `ProductID`) VALUES (NULL, '$klantnr', '$dag', '$tijd','$aantal_pizza', '$date', '$soort_pizza')";
 }else {
   echo 'je moet alle verplichter velden invullen';
 }
