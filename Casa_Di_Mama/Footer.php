@@ -18,6 +18,7 @@
             
 		<footer class="footer-distributed">
                     <div id="page-container">
+                        
 			<div class="footer-left">
 
 				<p class="footer-links">
@@ -58,9 +59,10 @@
 
 			</div>
                     </div>
+                 
 		</footer>
             
-
+            
 	</body>
 
 </html>
