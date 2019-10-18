@@ -25,7 +25,7 @@ if (isset($_POST['reg_user'])) {
   $gebruikersnaam = mysqli_real_escape_string($db, $_POST['gebruikersnaam']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-  $geslacht = mysqli_real_escape_string($db, $_POST['geslacht']);
+  $geslacht = $_POST['geslacht'];
   //$geboortedatum = mysqli_real_escape_string($db, $_POST['geboortedatum']);
   $plaats = mysqli_real_escape_string($db, $_POST['plaats']);
   $postcode = mysqli_real_escape_string($db, $_POST['postcode']);
