@@ -37,7 +37,7 @@
 			<input type="password" name="password_1">
 	</div>
 	<div class="input-group">
-		<label>Bevestiging wachtwoord</label>
+		<label>Bevestig wachtwoord</label>
 			<input type="password" name="password_2">
 	</div>
 	
