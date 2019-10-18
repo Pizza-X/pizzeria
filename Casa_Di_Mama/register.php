@@ -33,11 +33,11 @@
 			<input type="text" name="gebruikersnaam" value="<?php echo $gebruikersnaam; ?>">
 	</div>
 	<div class="input-group">
-		<label>Password</label>
+		<label>Wachtwoord</label>
 			<input type="password" name="password_1">
 	</div>
 	<div class="input-group">
-		<label>Confirm password</label>
+		<label>Bevestiging wachtwoord</label>
 			<input type="password" name="password_2">
 	</div>
 	
