@@ -1,4 +1,4 @@
-<?php include('inlog_db_con.php');
+<?php include('db_conn.php');
 echo '<br />';
 ?>
 
@@ -59,7 +59,7 @@ $insert="INSERT INTO `abonnement` (`Abbonr`, `Klantnr`, `Dag`, `tijd`,`aantalpiz
   echo 'je moet alle verplichter velden invullen';
 }
 // insert de data en als het succesvol is toon de gegevens van de klant
-if(mysqli_query($link, $insert)){
+if(mysqli_query($db, $insert)){
   echo 'U bent ingeschreven<br />';
   echo 'Uw gegevens:<br />';
   echo 'bezorgdag: '.  $dag . '<br />';
@@ -76,4 +76,4 @@ if(mysqli_query($link, $insert)){
  echo $soort_pizza . '<br />';
  echo $klantnr;*/
 //NULL,  '$klantnr', '$dag', '$tijd', '$date', '$soort_pizza'
-?>
+?> 

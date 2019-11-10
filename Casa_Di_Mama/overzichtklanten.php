@@ -1,4 +1,4 @@
-<?php include("db_connection_Danial.php");?>
+<?php include("db_conn.php");?>
 <?php include ("Header.php");?>
 <!doctype html>
 
@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+
   <div class="overzichtklantenOuter">
   <table style="background-color:lightgrey;" border="1" width="30%" align="Center"> <tr><td colspan="113" align="center"><h2 align="center">Overzicht klanten</h2></td></tr>
     <tr>
@@ -20,9 +20,9 @@
       </tr>
  <?php
    // sql query
-  $sql= "SELECT * fROM klant;";
+  $sql= "SELECT * FROM klant;";
   // sql query naar de rdbms verzenden
-  $result=mysqli_query($link, $sql);
+  $result=mysqli_query($db, $sql);
    //bewaar het aantall rijen in $resultcheck
   $resultcheck=mysqli_num_rows($result);
   // test om te kijken of jeuste aantall rrijen treug gekomen
@@ -50,11 +50,9 @@
         echo '</tr>';
 }
 }
-echo  '</table>';
-
  ?>
+ </table>
   </div>
-</body>
 </html>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php include('Footer.php');?>

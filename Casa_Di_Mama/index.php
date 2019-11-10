@@ -1,67 +1,66 @@
-<?php include 'Header.php'; ?>
-
+<?php include 'Header.php'; include_once 'functies.php'; ?>
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" a href="styling.css">
         <title>Landingspagina</title>
+        
     </head>
-    <body id="body_index">
+    <body>
         <div class="containerIndex">
             <h1>Dit is ons assortiment</h1> <br>
             <div class="artikel_index">
-                <a href="">
+                <a href="product_pagina.php?id=1">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
                 <div class="containerArtikelInfo">
                     <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
-                    Dit is artikel 1</p>
+                    <?php echo pizza_naam(1); ?> </p>
                 </div>
             </div>
             <div class="artikel_index">
-                <a href="">
+                <a href="product_pagina.php?id=2">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
                 <div class="containerArtikelInfo">
                     <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
-                    Dit is artikel 2</p>
+                    <?php echo pizza_naam(2);?></p>
                 </div>
             </div>
             <div class="artikel_index">
-                <a href="">
+                <a href="product_pagina.php?id=1">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
                 <div class="containerArtikelInfo">
                     <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
-                    Dit is artikel 3</p>
+                    <?php echo pizza_naam(1); ?></p>
                 </div>
             </div>
             <div class="artikel_index">
-                <a href="">
+                <a href="product_pagina.php?id=1">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
                 <div class="containerArtikelInfo">
                     <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
-                    Dit is artikel 4</p>
+                    <?php echo pizza_naam(1); ?></p>
                 </div>
             </div>
             <div class="artikel_index">
-                <a href="">
+                <a href="product_pagina.php?id=2">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
                 <div class="containerArtikelInfo">
                     <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
-                    Dit is artikel 5</p>
+                    <?php echo pizza_naam(2); ?></p>
                 </div>
             </div>
             <div class="artikel_index">
-                <a href="">
+                <a href="product_pagina.php?id=1">
                 <img id="img_artikel" alt="pepperoni" src="http://www.hammockpizza.co/image/cache/pizza/pepperoni%20pizza-800x800.png">
                 </a>
                 <div class="containerArtikelInfo">
                     <p> <a href="index.php"> <img id="winkelwagenPNG" alt="shopping_cart.png" src="images/winkelwagen.png"> </a>
-                    Dit is artikel 6</p>
+                    <?php echo pizza_naam(1); ?></p>
                 </div>
             </div>
             <div class="overOns">
