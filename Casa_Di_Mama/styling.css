@@ -1,0 +1,399 @@
+/* global */
+body{
+    font-family: 'Roboto'; font-size: 15px;
+    background-image: url("images/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* index */
+.containerIndex {
+    width: 930px;
+    height: 950px;
+    text-align: center;
+    margin: auto;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 3px;
+    background-color:#7fcf23;
+    padding-top: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-style: 1px;
+    border-color: #247034;
+    color: #247034;
+}
+.artikel_index {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 207, 121,.5);
+    margin-top: 10px;
+    float: left;
+    margin: 5px;
+    border-radius: 5px;
+}
+.containerArtikelInfo{
+    text-align: left;
+
+}
+#winkelwagenPNG{
+    width: 10%;
+    height: 10%;
+    padding-right: 18%;
+    padding-left: 5%;
+}
+#img_artikel{
+    width: 85%;
+    height: 85%;
+}
+.overOns{
+    width: 750px;
+    height:150px;
+    background: #247034;
+    margin-top: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-left: 40px;
+    padding-right:40px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+/* overOns */
+.overOnsVolledig{
+    width: 930px;
+    height: 280px;
+    text-align: center;
+    margin: auto;
+    background: #247034;
+    padding-top: 30px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    margin-top: 50px;
+    color: white;
+    border-radius:5px;
+}
+
+/* Header */
+*{
+margin:0;
+padding:0;
+list-style: none;
+text-decoration:none;
+}
+header {
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  background: #247034;
+  color: darkblue;
+}
+nav {
+  background-color:#7fcf23;
+  width: 100%;
+  height: 50px;
+}
+ul {
+color: red;
+}
+li{
+  float: left;
+  border-right: 2px solid black;
+}
+li a {
+display: block;
+text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+    color: #f2f5f7;
+}
+li a:hover{
+   color: black;
+
+}
+li a:hover:not(.active) {
+  background-color:  #4CAF50  ;
+}
+.active {
+  background-color: #1396cf;
+}
+.search-omhulsel {
+float: right;
+margin-left:30%;
+}
+  #inputHeader{
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  background: #ccc;
+}
+
+/* Login */
+.container{
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(44, 62, 80,0.7);
+    margin-top: 160px;
+    border-radius: 10px;
+}
+.login_fout{
+    width: 450px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+}
+.container img{
+    margin-top: -60px;
+    width: 140px;
+    height: 140px;
+}
+#inlog{
+    margin-top: 30px;
+    height: 45px;
+    width: 300px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: none;
+}
+.btn-login{
+    margin-top: 40px;
+    padding: 15px 25px;
+    border: none;
+    background-color: #27ae60;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* registratieform */
+.registratieOuter{
+    width: 600px;
+    height: 775px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(44, 62, 80,0.7);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    color: white;
+    line-height: 200%;
+}
+
+/* abonnement */
+.abonnementOuter{
+    width: 600px;
+    height: 775px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(44, 62, 80,0.7);
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    color: white;
+    line-height: 200%;
+}
+
+/* overzichtklanten */
+.overzichtklantenOuter{
+    width: 1192px;
+    height: auto;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: blue;
+}
+
+/* register */
+#body_register {
+  font-size: 120%;
+  background-image: url("images/background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  width: 30%;
+  margin: 50px auto 0px;
+  color: white;
+  background: #5F9EA0;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+#form_register, .content{
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #5F9EA0;
+  border: none;
+  border-radius: 5px;
+}
+.success {
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
+
+/* error */
+.error {
+  width: 92%;
+  margin: 0px auto;
+  padding: 10px;
+  border: 1px solid #a94442;
+  color: #a94442;
+  background: #f2dede;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* productPagina */
+.containerProductPagina {
+    width: 930px;
+    height: 690px;
+    text-align: center;
+    margin: auto;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 3px;
+    background-color:#7fcf23;
+    padding-top: 3px;
+    border-radius: 5px;
+    border-style: solid;
+    border-style: 1px;
+    border-color: #247034;
+}
+.productInfo{
+    width: 445px;
+    height: 147px;
+    text-align: center;
+    margin-top: 210px;
+    margin-left: 370px;
+    background: rgba(255, 207, 121,.6);
+    border-radius:5px;
+    border-style: 1px;
+    border-style: solid;
+    border-color: #247034;
+}
+.productInfoInner{
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    float: left;
+    margin: auto;
+    background: rgba(155, 155, 155,.3);
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    color: white;
+    border-radius:5px;
+}
+.artikel_pagina {
+    width: 360px;
+    height: 360px;
+    background: rgba(255, 207, 121,.5);
+    margin-top: 0.25%;
+    margin-left: 0.5%;
+    float: left;
+    border-radius: 5px;
+    display:block;
+}
+#img_product_pagina{
+    width: 100%;
+    height: 100%;
+    display:block;
+    margin:auto;
+}
+.productInfoText{
+  float:left;
+  text-align: left;
+  width: 50%;
+  padding: 10px;
+  height: auto;
+  background: rgba(255, 207, 121,.5);
+  margin-left: 0.5%;
+  border-style: solid;
+  border-style: 1px;
+  border-color: #247034;
+}
+
+/* winkelwagen_pagina */
+.tabelWinkelwagen{
+    width: 1000px;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    color: black;
+}
+.container_winkelwagen {
+    width: 930px;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    background-color:#7fcf23;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    padding-right: 0.5%;
+    padding-left: 0.5%;
+    border-radius: 5px;
+    border-style: solid;
+    border-style: 1px;
+    border-color: #247034;
+}
