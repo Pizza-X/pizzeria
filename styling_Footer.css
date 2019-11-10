@@ -1,0 +1,41 @@
+article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+	position:absolute;
+    bottom:0;
+    display: flex;
+    padding: 5px;
+    background-color: #006600;
+    color: #fff;
+	width: 99%;
+}
+
+#footer-company-name{
+    display: table;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 300px;
+	
+}
+
+#footer-company-about{
+    display: table;
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 5px;
+	
+}
+
+#fa-fa-phone{
+    display: table;
+    text-align: right;
+    margin-left: 585px;
+    margin-right: auto;
+	position:absolute;
+    bottom:0;
+}
+
