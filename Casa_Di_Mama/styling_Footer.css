@@ -3,17 +3,15 @@ body {
 	padding: 0;
 }
 .main {
-	max-height: 550px;
-	background-color: #292c2f;
-	color: white;
-	font-size: 38pt;
-	text-align: center;
-	line-height: 550px;
+	  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 8em;
+  margin-top: -2.5em
 }
 footer{
-     /* position: fixed; */
+	/*position: fixed;*/
 	bottom: 0;
-
 }
 .footer-distributed{
 	background-color: #247034;
@@ -23,8 +21,8 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
  
-	padding: 55px 50px;
-	margin-top: 3px;
+	padding: 25px 25px;
+	margin-top: 80px;
 }
  
 .footer-distributed .footer-left,

@@ -1,65 +1,67 @@
-<?php include('inlog_db_con.php');
-echo '<br />';
-?>
+<?php include('db_conn.php'); ?>
+<?php include('header.php'); ?>
 
+<?php include("functies.php") ?>
 <?php
- session_start();
+
 // alle inputs een lege waarde geven
   // waardes van eeror leeg maken
   $dagErr="";
   $tijdErr="";
   $aantal_pizzaErr="";
   $soort_pizzaErr="";
-  $klantnrErr="";
+  //$klantnrErr="";
   // waardes van varibles leeg maken
   $dag="";
   $tijd="";
   $aantal_pizza="";
   $soort_pizza="";
-  $klantnr="";
+  $klantnr= klantnr_uit_de_sessie($_SESSION['gebruikersnaam']) ;
   $date=date("y/m/d");
    //als het met de post method gestuurd is
+   ?> <br> <div class="containerDeletePagina"> <?php
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // geen lege waardes
   if (empty($_POST['dag'])) {
-    $dagErr= 'dag is verplicht';
-    echo $dagErr . 'ga terug en vul deze AUB in.<br />';
+    $dagErr= 'Dag is verplicht';
+    echo $dagErr . '<br />';
   }else{
     $dag=$_POST['dag'];
   }
   if(empty($_POST['aantalpizza'])){
-   $tijdErr='tijd is verplicht';
-   echo $tijdErr . 'ga terug en vul deze AUB in.<br />';
+   $tijdErr='Tijd is verplicht';
+   echo $tijdErr . '<br />';
  }else{
    $tijd=$_POST['tijd'];
  }
  if(empty($_POST['aantalpizza'])){
-   $aantal_pizzaErr='aantalpizza is verplicht';
-   echo $aantal_pizzaErr . 'ga terug en vul deze AUB in<br />';
+   $aantal_pizzaErr='Aantal pizza\'s is verplicht';
+   echo $aantal_pizzaErr . ' <br />';
  }else{
    $aantal_pizza=$_POST['aantalpizza'];
  }
- if (empty($_POST['soort_pizza'])) {
-   $soort_pizzaEr='soortpizza is verplicht';
-   echo $soort_pizzaErr .  'ga terug en vul deze AUB in.<br />';
- }else {
-   $soort_pizza=$_POST['soort_pizza'];
- }
- if (empty($_POST['klantnr'])) {
-     $klantnrErr='klantnummer is verplicht ';
-     echo $klantnrErr .  'ga terug en vul deze AUB in.<br />';
- }else {
-   $klantnr=$_POST['klantnr'];
- }
+ $soort_pizza=$_POST['soort_pizza'];
+ 
+ ?> 
+ <form><input type="button" value="Ga terug" onclick="javascript:history.back();"/> </form>
+ 
+ </div> 
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <?php
 }  // if voorkomt dat er geen lege of foute data in de DB ingeschreven worden
   // $insert hout de inhoud van de query in
-if (!empty($dag) && !empty($tijd) && !empty($aantal_pizza) && !empty($soort_pizza) && !empty($klantnr)){
+if (!empty($dag) && !empty($tijd) && !empty($aantal_pizza) && !empty($soort_pizza)){
 $insert="INSERT INTO `abonnement` (`Abbonr`, `Klantnr`, `Dag`, `tijd`,`aantalpizza`, `Datum`, `ProductID`) VALUES (NULL, '$klantnr', '$dag', '$tijd','$aantal_pizza', '$date', '$soort_pizza')";
-}else {
-  echo 'je moet alle verplichter velden invullen';
+// insert de data en als het succesvol is toon de gegevens van de klant
+if(mysqli_query($db, $insert)){    
+		echo '<script>alert("U heeft zich succesvol geregistreerd voor het abonnement.");</script>';
+      echo '<script>window.location="aboklant.php";</script>';
+}
+}else { 
+  	
 }
 // insert de data en als het succesvol is toon de gegevens van de klant
-if(mysqli_query($link, $insert)){
+/*if(mysqli_query($db, $insert)){
   echo 'U bent ingeschreven<br />';
   echo 'Uw gegevens:<br />';
   echo 'bezorgdag: '.  $dag . '<br />';
@@ -69,7 +71,7 @@ if(mysqli_query($link, $insert)){
   echo  'Uw klantnummer: ' . $klantnr;
 }else{
   echo 'er is iets fout gegaan';
-}
+}*/
  /*echo $dag . '<br />';
  echo $tijd . '<br />';
  echo $aantal_pizza . '<br />';
@@ -77,3 +79,4 @@ if(mysqli_query($link, $insert)){
  echo $klantnr;*/
 //NULL,  '$klantnr', '$dag', '$tijd', '$date', '$soort_pizza'
 ?>
+<?php include('footer.php');?>

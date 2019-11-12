@@ -1,5 +1,5 @@
-<?php include("db_connection_Danial.php");?>
-<?php include ("Header.php");?>
+<?php include("db_conn.php");?>
+<?php include("Header.php");?>
 <!doctype html>
 
 <html lang="en">
@@ -10,9 +10,9 @@
 
 </head>
 
-<body>
+<br><br><br>
   <div class="overzichtklantenOuter">
-  <table style="background-color:lightgrey;" border="1" width="30%" align="Center"> <tr><td colspan="113" align="center"><h2 align="center">Overzicht klanten</h2></td></tr>
+  <table style="background-color:lightgrey;" border="1" width="100%" align="Center"> <tr><td colspan="113" align="center"><h2 align="center">Overzicht klanten</h2></td></tr>
     <tr>
       <th>klantnr</th><th>Voornaam</th><th>Tussenvoegsel</th><th>Achternaam</th><th>Gebruikersnaam</th><th>Wachtwoord</th>
       <th>Geslacht</th><th>Geboortedatum</th><th>Plaats</th><th>Postcode</th><th>Straat</th>
@@ -22,7 +22,7 @@
    // sql query
   $sql= "SELECT * fROM klant;";
   // sql query naar de rdbms verzenden
-  $result=mysqli_query($link, $sql);
+  $result=mysqli_query($db, $sql);
    //bewaar het aantall rijen in $resultcheck
   $resultcheck=mysqli_num_rows($result);
   // test om te kijken of jeuste aantall rrijen treug gekomen
@@ -30,8 +30,8 @@
   // als aantaal rijen groterzijn dan nul
  if($resultcheck>0){
     //while zorgt dat alle rijen worden uitgeprint
-   
    while($row=mysqli_fetch_assoc($result)){
+            //$_GET["klantnr"]=  $row['Klantnr'];
          echo '<tr>';
          echo  '<td>' . $row['Klantnr'] . '</td>';
          echo  '<td>' . $row['Voornaam'] . '</td>';
@@ -45,16 +45,15 @@
          echo  '<td>'. $row['Postcode']. '</td>';
          echo  '<td>'. $row['Straat']. '</td>';
          echo  '<td>'. $row['Huisnummer']. '</td>';
-        echo '<td><a href=#>Wijzigen</a><td>';
-        echo  '<td><a href=#>Verwijderen</a></td>';
+      	echo ("<td> <a href=\"updateKlant.php?Klantnr=".$row['Klantnr']."\">Wijzig</a></td>\n ");
+        echo  ("<td> <a href=\"Admin_klant_delete.php?Klantnr=".$row['Klantnr']."\">Verwijder </a>");
         echo '</tr>';
 }
 }
-echo  '</table>';
-
  ?>
-  </div>
-</body>
+ </table>
+</div>
+
 </html>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <?php include('Footer.php');?>

@@ -5,3 +5,5 @@
   	<?php endforeach ?>
   </div>
 <?php  endif ?>
+
+<!-- doorloopt alle erros en toont alle erros op het scherm. Het doorloop elke error die geplaatst wordt in $errors. stopt pas als de laatste error is gegeven -->

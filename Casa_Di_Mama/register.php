@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registration system PHP and MySQL</title>
+  <title>Registratie</title>
   <link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 <body>
@@ -16,12 +16,15 @@
   <form id=form_register method="post" action="register.php">
   	<?php include('error.php'); ?>
 	<div class="input-group">
+	<!-- bij elke label staat Span class * betekent dat het verplicht is -->
+	<!-- mocht er iets niet worden ingevuld dan blijft de rest staat waar php echo voor staat -->
+
 		<label>Voornaam <span class="error2">*</span> </label>
 			<input type="text" name="voornaam" value="<?php echo $voornaam; ?>">
 			
 	</div>	
 	<div class="input-group">
-		<label>Tussenvoegsel <span class="error2">*</span> </label>
+		<label>Tussenvoegsel </label>
 			<input type="text" name="tussenvoegsel">
 	</div>
 	<div class="input-group">
@@ -47,12 +50,29 @@
 	
 	
 		<label>Geslacht <span class="error2">*</span> </label>
-			<input type="radio" name="geslacht" value="M"> M
-                        <input type="radio" name="geslacht" value="V"> V <br><br>
-	
-		<label> Geboortedatum <span class="error2">*</span> </label>
-		<div class="input-group">
-			 <input type="date" name="geboortedatum" value="<?php echo $geboortedatum; ?>">
+		<!-- wordt gecheckt of er wel een button wordt ingevoerd -->
+	 <input type="radio" name="geslacht" <?php if (isset($geslacht) && $geslacht=="vrouw") echo "checked";?> value="V">Vrouw
+  <input type="radio" name="geslacht" <?php if (isset($geslacht) && $geslacht=="man") echo "checked";?> value="M">Man <br><br>
+  <!-- drop down menu om je geboorte jaar, maand en dag te kiezen -->
+	<label>Geboortedatum  <span class="error2">*</span>  </label>	<br>
+		<select name="jaar" value="<?php echo $jaar; ?>">
+			<option value="">---Jaar---</option>
+				<?php for ($i = 1960; $i < date('Y'); $i++) : ?>
+			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+				<?php endfor; ?>
+		</select>
+		<select name="maand" value="<?php echo $maand; ?>">
+			<option value="">---Maand---</option>
+				<?php for ($i = 1; $i <= 12; $i++) : ?>
+			<option value="<?php echo ($i < 10) ? '0'.$i : $i; ?>"><?php echo $i; ?></option>
+				<?php endfor; ?>
+		</select>
+		<select name="dag" value=<?php echo $dag; ?>">
+			<option value="">---Dag---</option>
+				<?php for ($i = 1; $i <= 31; $i++) : ?>
+			<option value="<?php echo ($i < 10) ? '0'.$i : $i; ?>"><?php echo $i; ?></option>
+				<?php endfor; ?>
+		</select>
 
         </div>
 	<div class="input-group">
@@ -72,8 +92,8 @@
 			<input type="number" name="huisnummer" value="<?php echo $huisnummer; ?>">
 	</div>
 	  
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
-  	
+  	  <button type="submit" class="btn" name="submit">Register</button>
+  	<!-- mocht je al een account hebben kan je onder in het scherm op Log in drukken -->
           <p>
               <br>	Heeft u al een account? <a href="login.php">Log in</a>
           </p>

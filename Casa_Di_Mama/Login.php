@@ -4,7 +4,11 @@
 	<title>Login Form Pizzaria</title>
         <link rel="stylesheet" a href="styling.css">
 </head>
-<body   id="body_inlog" background="https://media2.s-nbcnews.com/i/newscms/2017_20/1214796/pepperoni-pizza-delivery-tease-001-170516_b991678502b2793616eeaa8351db3408.jpg">
+    <body>
+        <?php if(isset($_SESSION['ingelogd'])) { ?>
+        <div class="login_fout">De gebruikersnaam of het wachtwoord is niet correct.</div>
+        <?php } ?>
+        
 	<div class="container">
 	<img src="https://spotlightmedia.com/wp-content/uploads/2015/07/ClientLogincol2.png" alt="login plaatje">
         <form method="POST" action="db_connection_inlog.php">
@@ -26,6 +30,6 @@
 		</form>
 	</div>
     <br><br><br><br><br><br><br><br>
-</body>
+    </body>
 </html>
 <?php include 'Footer.php'; ?>

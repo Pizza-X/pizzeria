@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -10,15 +10,13 @@
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="styling_Footer.css">
+	<link rel="stylesheet" href="styling_Footer.css">
 
 </head>
 
 	<body>
-            
 		<footer class="footer-distributed">
-                    <div id="page-container">
-                        
+
 			<div class="footer-left">
 
 				<p class="footer-links">
@@ -54,15 +52,13 @@
 
 				<p class="footer-company-about">
 					<span>Over het bedrijf</span>
-					Pizzeria Casa Di Mama is een opkomende Pizzeria.
+					Pizzeria Casa Di Mama is een beginnende Pizzeria.
 				</p>
 
 			</div>
-                    </div>
-                 
+
 		</footer>
-            
-            
+
 	</body>
 
 </html>
