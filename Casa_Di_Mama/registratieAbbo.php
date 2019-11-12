@@ -1,5 +1,5 @@
 <?php include('Header.php');?>
-<?php// include('functies.php');?>
+<?php include('functies.php');?>
 
 <html>
 <head>

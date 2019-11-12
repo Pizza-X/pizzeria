@@ -1,3 +1,4 @@
+<?php include('Header.php');?>
 <?php include('db_conn.php') ?>
 <!doctype html>
 
@@ -57,15 +58,20 @@ if($resultcheck>0){
     }
 
   ?>
-  <p><h2>Wil u de klant met onderstande gegevens verwijderen?</h2><p>
-    <p><h3><?php echo "<a href=\"confirmation.php?Klantnr=$Klantnr\">Ja</a>"; ?></h3></p>
-    <p><h3><a href="overzichtklanten.php">Nee</a></h3></p>
-<!--<form align="Center" method="get" >
-  <input type="button" value="Yeah, verwijder" name="delete">
-	<input type="Button" value="Nee, terug" onclick="javascript:history.back();">
+</table>
 
+  <p><h2>Wil u de klant met bovenstande gegevens verwijderen?</h2></p>
+</div>
+    <!--
+    <p><h3><?php //echo "<a href=\"confirmation.php?Klantnr=$Klantnr\">Ja</a>"; ?></h3></p>
+    <p><h3><a href="overzichtklanten.php">Nee</a></h3></p>-->
+<form align="Center" method="get" action="confirmation.php" >
+  <input type="submit" value="Yeah, verwijder" name="delete">
+	<input type="Button" value="Nee, terug" onclick="javascript:history.back();">
+   <input type="hidden" value="<?php echo  $Klantnr ?>" name="Klantnr">
 </form>
--->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </body>
 </html>
+<?php include('Footer.php');?>

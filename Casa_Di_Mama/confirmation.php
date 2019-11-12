@@ -1,3 +1,4 @@
+<?php include('Header.php');?>
 <?php include('db_conn.php') ?>
 <?php
 echo  $_GET["Klantnr"];
@@ -8,3 +9,5 @@ if ($result){
   echo ("Klantnummer " .$_GET["Klantnr"] . " is verwijderd.<p>\n");}
 ?>
   <form><input type="button" value="Terug" onclick="window.location.href='overzichtklanten.php'" /></form>
+  <br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<?php include('Footer.php');?>

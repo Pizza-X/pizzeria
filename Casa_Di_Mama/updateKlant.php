@@ -1,5 +1,5 @@
 <?php include('sever_update_admin.php'); ?>
-<?php include('Header.php'); ?>
+<?php //include('Header.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +7,43 @@
   <link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 <body>
-  <?php $Klantnr = $_GET['Klantnr'];?>
+  <?php $Klantnr = $_GET['Klantnr'];
+
+    // sql query
+   $sql= "SELECT * fROM klant Where Klantnr='" .$_GET["Klantnr"]."';";
+   // sql query naar de rdbms verzenden
+   $result=mysqli_query($db, $sql);
+    //bewaar het aantall rijen in $resultcheck
+   $resultcheck=mysqli_num_rows($result);
+   // test om te kijken of jeuste aantall rrijen treug gekomen
+   //echo $resultcheck;
+   // als aantaal rijen groterzijn dan nul
+  if($resultcheck>0){
+     //while zorgt dat alle rijen worden uitgeprint
+
+    while($row=mysqli_fetch_assoc($result)){
+      $gebruikersnaam =$row['Gebruikersnaam'] ;
+      $email    = $row['Emailadres'];
+      $voornaam = $row['Voornaam'];
+      $achternaam = $row['Achternaam'];
+      $geslacht = $row['Geslacht'];
+      $geboortedatum = $row['Geboortedatum'];
+      $plaats = $row['Plaats'];
+      $postcode = $row['Postcode'];
+      $straat = $row['Straat'];
+      $huisnummer = $row['Huisnummer'];
+       $tussenvoegsel= $row['Tussenvoegsel'];
+}
+}
+
+
+
+
+
+
+
+
+      ?>
 <style>
 .error2 {color: #FF0000;}
 </style>
@@ -27,7 +63,7 @@
 	</div>
 	<div class="input-group">
 		<label>Tussenvoegsel </label>
-			<input type="text" name="tussenvoegsel">
+			<input type="text" name="tussenvoegsel" value="<?php echo $tussenvoegsel; ?>">
 	</div>
 	<div class="input-group">
 		<label>Achternaam <span class="error2">*</span> </label>

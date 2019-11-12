@@ -1,7 +1,8 @@
+<?php include('Header.php');?>
 <?php
 
 // initialiseren van de variablen
-$Klantnr=""; // klantnr is al bepaald
+/*$Klantnr=""; // klantnr is al bepaald
 $gebruikersnaam = "";
 $email    = "";
 $voornaam = "";
@@ -11,7 +12,7 @@ $geboortedatum = "";
 $plaats = "";
 $postcode = "";
 $straat = "";
-$huisnummer = "";
+$huisnummer = "";*/
 $errors = array();
  //connectie database
  $db = mysqli_connect("localhost", "root", "", "pizzeria");
@@ -67,7 +68,7 @@ if (isset($_POST['submit'])) {
   if (empty($straat)) { array_push ($errors, "Straat is verplicht"); }
 	elseif (!preg_match("/^[a-zA-Z ]*$/", $straat)) { array_push($errors, "Straat mag alleen uit letters bestaan"); } //check of Straat geldig is
   if (empty($huisnummer)) { array_push ($errors, "Huisnummer is verplicht"); }
-
+/*
   // Eerst op de database kijken of gebruikersnaam of email al bestaat
   $user_check_query = "SELECT * FROM klant WHERE Gebruikersnaam='$gebruikersnaam' OR Emailadres='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
@@ -81,7 +82,7 @@ if (isset($_POST['submit'])) {
     if ($user['Emailadres'] === $email) {              //Als emailadres al bestaat
       array_push($errors, "Emailadres bestaat al");
     }
-  }
+  }*/
 
   // Als er geen errors meer zijn kan het in de database worden gezet.
   if (count($errors) == 0) {
@@ -98,3 +99,5 @@ if (isset($_POST['submit'])) {
       echo '<a href="overzichtklanten.php">Naar de overzicht</a>';
   }
 }
+?>
+<?php //include('Footer.php');?>

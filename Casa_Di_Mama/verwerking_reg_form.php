@@ -1,10 +1,11 @@
+<?php include('Header.php'); ?>
 <?php include('db_conn.php');
 
 echo '<br />';
 ?>
 <?php include("functies.php") ?>
 <?php
- session_start();
+ //session_start();
 // alle inputs een lege waarde geven
   // waardes van eeror leeg maken
   $dagErr="";
@@ -86,3 +87,5 @@ if(mysqli_query($db, $insert)){
  echo $klantnr;*/
 //NULL,  '$klantnr', '$dag', '$tijd', '$date', '$soort_pizza'
 ?>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<?php include 'Footer.php'; ?>
