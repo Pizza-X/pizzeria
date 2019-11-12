@@ -92,12 +92,19 @@ if (isset($_POST['submit'])) {
       Gebruikersnaam='$gebruikersnaam', Wachtwoord=  '$password', Geslacht='$geslacht', Geboortedatum='$geboortedatum', Plaats='$plaats',
       Postcode='$postcode', Straat='$straat', Huisnummer='$huisnummer' WHERE Klantnr='$Klantnr'"
       ;
-      mysqli_query($db, $query);
+      $uitkomst =  mysqli_query($db, $query);
+      if (isset($uitkomst)) {
+
+
 	  /*$_SESSION['gebruikersnaam'] = $gebruikersnaam;
       header('location: login.php');*/
        echo 'het is gelukt!';
       echo '<a href="overzichtklanten.php">Naar de overzicht</a>';
-  }
+}
+    }else {
+      echo 'opps er is its fout gegaan. controleer aub of je allegegevens heb ingeluld.';
+    }
+
 }
 ?>
 <?php //include('Footer.php');?>
